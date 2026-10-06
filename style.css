@@ -1,0 +1,468 @@
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+
+/* ================================
+   NAVIGATION BAR
+================================ */
+
+header {
+    background-color: #172554;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #93c5fd;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 80vh;
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #312e81
+    );
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: #e0e7ff;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background-color: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   COMMON SECTION STYLES
+================================ */
+
+.events-section,
+.registration-section,
+.about-section,
+.contact-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+
+/* ================================
+   EVENT CARDS
+================================ */
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.event-card {
+    background-color: white;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Event image placeholder */
+
+.event-image {
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #6366f1
+    );
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.event-content {
+    padding: 25px;
+}
+
+.event-content h3 {
+    color: #172554;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.event-content p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.event-info {
+    margin-bottom: 20px;
+}
+
+.event-info p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+/* ================================
+   REGISTRATION FORM
+================================ */
+
+.registration-section {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 70px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.registration-form {
+    max-width: 700px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #172554;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ================================
+   ABOUT SECTION
+================================ */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-box {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+}
+
+.about-box h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    color: #555;
+}
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-info {
+    background-color: white;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: #172554;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   DESKTOP RESPONSIVE DESIGN
+================================ */
+
+@media (min-width: 768px) {
+
+    /* Navigation */
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        gap: 30px;
+    }
+
+
+    /* Hero */
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+
+    /* Event cards */
+
+    .event-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .event-card {
+        flex: 1 1 calc(50% - 25px);
+    }
+
+
+    /* About boxes */
+
+    .about-container {
+        flex-direction: row;
+    }
+
+    .about-box {
+        flex: 1;
+    }
+
+}
+
+
+/* ================================
+   LARGE DESKTOP
+================================ */
+
+@media (min-width: 1024px) {
+
+    .event-card {
+        flex: 1 1 calc(25% - 25px);
+    }
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+    }
+
+}
